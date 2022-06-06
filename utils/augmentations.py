@@ -22,8 +22,8 @@ class Albumentations:
             check_version(A.__version__, '1.0.3', hard=True)  # version requirement
 
             T = [
-                A.InvertImg(p=0.5),
-                A.RandomSizedBBoxSafeCrop(p=0.5, height=640, width=640, erosion_rate=0.2),
+                A.InvertImg(p=0.3),
+                A.RandomSizedBBoxSafeCrop(p=0.3, height=640, width=640, erosion_rate=0.2),
                 A.ToGray(p=0.00),
                 A.CLAHE(p=0.00),
                 A.RandomBrightnessContrast(p=0.0),
